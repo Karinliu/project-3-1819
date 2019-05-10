@@ -6,49 +6,79 @@
     <title>project 3</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Jiskefet <span class="sr-only">(current)</span></a>
+                        <a class="nav-link logo" href="#">logo <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-cern my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
+            <a class="nav-link notification" href="#"><img src="./notification.svg" alt=""> <span class="sr-only">(current)</span></a>
+            <a class="nav-link my-profile" href="#">My profile <span class="sr-only">(current)</span></a>
         </nav>
     </header>
-
-    <div class="container mt-3">
+    <div class="container">
         <div class="row">
-            <div class="col-md-2"> sidebar</div>
-            <div class="col-md-10">
-                 <div class="card">
+            <aside class="col-md-2 hidden">
+                <nav class="jf-sidebar ">
+                    <ul class="list-unstyled components">
+                        <li class="nav-item false"><a href="/logs" class="nav-link">Logs</a></li>
+                        <li class="nav-item false"><a href="/runs" class="nav-link">Runs</a></li>
+                        <li class="nav-item false"><a href="/logs/create" class="nav-link">Create new log</a></li>
+                        <li class="nav-item false"><a href="/subsystems" class="nav-link">Subsystems Overview</a></li>
+                    </ul>
+                    <div class="jf-footer">Jiskefet v0.1.0</div>
+                </nav>
+            </aside>
+            <div class="col-md-10 mt-5 pt-5 mx-auto">
+                <div class="card">
                     <div class="card-header">
                         Current tags
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0 tags-body">
-                            <p>CURRENT ALL TAGS</p>
-                            <input type="text" id="btn_text"/>
-                            <button class="btn btn-primary">Test</button>
+                            <div class="tags-header mb-1">
+                                <input class="form-control input-text" type="text" id="btn-text" required />
+                                <label class="mr-2 label-tag" for="btn-text">Edit tag</label>
+                            </div>
+                            <div class="tags-container">
+                            </div>
                         </blockquote>
                     </div>
                 </div>
-                <form class="admin-tags">
-                    <div class="form-group">
-                        <label for="tags">Add new tag name</label>
-                        <input type="text" class="form-control" id="tagname" placeholder="Tag name"><label for="tags">Add new tag color</label>
-                        <input type="text" class="form-control" id="tagcolor" placeholder="Tag color">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        Add new tag
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                    <div class="card-body pt-0">
+                        <form class="admin-tags">
+                            <div class="form-group label-group">
+                                <div class="tagmake-group mt-5">
+                                    <input type="text" class="form-control input-text" id="tagname" required>
+                                    <label class="label-tag" for="tags">Add new tag name</label>
+                                </div>
+                                <div class="tagmake-group">
+                                    <input type="text" class="form-control input-text" id="tagcolor" required>
+                                    <label class="label-tag" for="tagcolor">Add new tag color</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-outline-cern">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

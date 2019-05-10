@@ -6,58 +6,181 @@
     <title>project 3</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Jiskefet <span class="sr-only">(current)</span></a>
+                        <a class="nav-link logo" href="#">logo <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-cern my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
+            <a class="nav-link notification" href="#"><img src="./notification.svg" alt=""> <span class="sr-only">(current)</span></a>
+            <a class="nav-link my-profile" href="#">My profile <span class="sr-only">(current)</span></a>
         </nav>
     </header>
     <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-2">Sidebar</div>
-            <div class="col-md-10">
-                <div class="card">
+        <div class="row">
+            <aside class="col-md-2 hidden">
+                <nav class="jf-sidebar ">
+                    <ul class="list-unstyled components">
+                        <li class="nav-item false"><a href="/logs" class="nav-link">Logs</a></li>
+                        <li class="nav-item false"><a href="/runs" class="nav-link">Runs</a></li>
+                        <li class="nav-item false"><a href="/logs/create" class="nav-link">Create new log</a></li>
+                        <li class="nav-item false"><a href="/subsystems" class="nav-link">Subsystems Overview</a></li>
+                    </ul>
+                    <div class="jf-footer">Jiskefet v0.1.0</div>
+                </nav>
+            </aside>
+            <div class="col-md-10 mt-5 pt-5 mx-auto">
+                <div class="card bg-light overview-log">
                     <div class="card-header">
-                        Quote
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Log</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <div><button type="button" data-toggle="modal" data-target="#add-existing-run" class="btn btn-cern float-right">Link to run</button>
+                                        <div tabindex="-1" role="dialog" id="add-existing-run" class="modal mt-5">
+                                            <div role="document" class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">Link to run</h5><button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><button class="btn btn-comment-log btn-outline-cern undefined undefined">Comment on this Log</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <blockquote class="blockquote mb-0">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                        </blockquote>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="card-title">facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <dl class="row" style="margin-block-end: 0px;"><dt class="col-sm-6">Log id</dt>
+                                        <dd class="col-sm-6">538</dd>
+                                    </dl>
+                                    <dl class="row" style="margin-block-end: 0px;"><dt class="col-sm-6">Subtype</dt>
+                                        <dd class="col-sm-6"><span class="badge badge-warning">run</span></dd>
+                                    </dl>
+                                    <dl class="row" style="margin-block-end: 0px;"><dt class="col-sm-6">Origin</dt>
+                                        <dd class="col-sm-6"><span class="badge badge-secondary">process</span></dd>
+                                    </dl>
+                                    <dl class="row" style="margin-block-end: 0px;"><dt class="col-sm-6">Creation time</dt>
+                                        <dd class="col-sm-6">10:23:53 30/07/2019</dd>
+                                    </dl>
+                                    <dl class="row" style="margin-block-end: 0px;"><dt class="col-sm-6">Author</dt>
+                                        <dd class="col-sm-6">5</dd>
+                                    </dl>
+                                    <dl class="row" style="margin-block-end: 0px;"><dt class="col-sm-6">Tags</dt>
+                                        <dd class="col-sm-6 tag-overview">
+                                            <span class="badge badge-success mr-1">Tag</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <form>
-                    <div class="form-group">
-                        <label for="log">Add a tag to this log</label>
-                        <input type="text" class="form-control" id="log" placeholder="Enter log title">
+
+                <div class="card mt-5 mb-5">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link active">Current log</a></li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link false">Comments</a></li>
+                                <li class="nav-item"><a href="javascript:void(0);" class="nav-link false">Runs</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content false">
+                                <div class="jf-markdown-wrapper">
+                                    <div id="CreateLogMarkdown" class="jf-markdown-viewer">
+                                        <h3>Content</h3>
+                                        <p>Leipe cronjob g, log created at 2019-05-09T11:55:01</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="tab-content false">
+                                <div>
+                                    <h3>Tags</h3>
+                                    <div class="form-group undefined">
+                                        <div class="field">
+                                            <div class="card no-shadow">
+                                                <div class="card-header">
+                                                    Currently added tags
+                                                </div>
+                                                <div class="card-body">
+                                                    <blockquote class="blockquote mb-0 tags-body">
+                                                        <div class="tags-addedcontainer">
+                                                        </div>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form>
+                                        <div class="form-group undefined"><label for="tag">Select an existing tag:</label>
+                                            <div class="field">
+                                                <div class="card no-shadow">
+                                                    <div class="card-header">
+                                                        Choose from this tags
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <blockquote class="blockquote mb-0 tags-body">
+                                                            <div class="tags-container">
+                                                            </div>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tagmake-group">
+                                            <input type="text" class="form-control input-text" id="tagText" required>
+                                            <label class="label-tag" for="tagText">Search for tag</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="tab-content false">
+                                <h3>Add an attachment</h3>
+                                <div>
+                                    <ul></ul>
+                                    <div><button type="button" data-toggle="modal" data-target="#attachment-modal-id" class="btn btn-outline-cern btn-lg float-right">Add attachment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="tag">Select an existing tag:</label>
-                        <select class="form-control" id="tag">
-                            <option>Human</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+
+
             </div>
         </div>
     </div>
+
+
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="./index.js"></script>
+    <script src="./client.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "watch:sass": "node-sass sass/main.scss ./src/css/styles.css -w",
+    "devserver": "nodemon app.js",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css"
   },
   "author": "",
   "license": "ISC",

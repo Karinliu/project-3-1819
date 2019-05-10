@@ -1,3 +1,110 @@
-.btn-primary{
-	border: 0;
+.btn-primary {
+    border: 0;
+}
+
+.tags-header {
+    // display: flex;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
+
+    .label-tag {
+        position: absolute;
+        top: 19px;
+        left: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #485459;
+        pointer-events: none;
+    }
+
+
+    p {
+        display: inline-block;
+    }
+
+    #btn-text {
+        width: 10em;
+        border: none;
+        border-bottom: 1px solid $lightgray;
+
+        &:focus+.label-tag {
+            transition: 0.3s;
+            color: red;
+            top: -6px;
+            left: 2px;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #7C8589;
+
+        }
+
+        &:valid+.label-tag {
+            color: red;
+            top: -6px;
+            left: 2px;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #7C8589;
+        }
+    }
+}
+
+.tagmake-group {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
+
+    .label-tag {
+        position: absolute;
+        top: 19px;
+        left: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #485459;
+        pointer-events: none;
+    }
+
+    .input-text {
+        border: none;
+        border-bottom: 1px solid $lightgray;
+
+        &:focus+.label-tag {
+            transition: 0.3s;
+            color: red;
+            top: -6px;
+            left: 2px;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #7C8589;
+
+        }
+
+        &:valid+.label-tag {
+            color: red;
+            top: -6px;
+            left: 2px;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #7C8589;
+        }
+    }
+}
+
+.tag-btn{
+    &:hover{
+        opacity: 0.75;
+    }
 }

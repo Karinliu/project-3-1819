@@ -1,2 +1,188 @@
+.remove {
+  opacity: 0;
+  transition: 1s; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.1; } }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(10deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(-10deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  header nav {
+    background-color: #1f201f; }
+    header nav .nav-link:hover {
+      color: #2574b9 !important; }
+    header nav .notification img {
+      width: 1.5em; }
+      header nav .notification img:hover {
+        animation-name: rotate;
+        animation-duration: 0.5s; }
+    header nav .my-profile {
+      color: #fff; }
+      header nav .my-profile:hover {
+        color: #2574b9; }
+
+a {
+  color: #2574b9; }
+
+.jf-sidebar {
+  width: 200px;
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  height: 100vh;
+  z-index: 99;
+  transition: all .3s;
+  background-color: #1f201f;
+  color: #9E9E9E; }
+  .jf-sidebar .nav-item {
+    color: #1f201f; }
+    .jf-sidebar .nav-item:hover {
+      background-color: #fff; }
+    .jf-sidebar .nav-item .nav-link {
+      color: #9E9E9E; }
+      .jf-sidebar .nav-item .nav-link:hover {
+        color: #000; }
+  .jf-sidebar .jf-footer {
+    position: absolute;
+    bottom: 0;
+    height: 6rem;
+    text-align: center;
+    width: 100%; }
+
+.btn-outline-cern {
+  color: #2574b9;
+  background-color: transparent;
+  background-image: none;
+  border-color: #2574b9; }
+  .btn-outline-cern:hover {
+    color: #fff;
+    background-color: #2574b9;
+    border-color: #2574b9; }
+
+.btn-cern {
+  color: #fff;
+  background-color: #2574b9;
+  border-color: #2574b9; }
+  .btn-cern:hover {
+    color: #fff;
+    background-color: #205d92;
+    border-color: #205d92; }
+
+aside {
+  margin-top: 10em; }
+
+.card {
+  box-shadow: 6px 5px 16px -2px rgba(0, 0, 0, 0.5); }
+
+.no-shadow {
+  box-shadow: none; }
+
+@media (max-width: 49em) {
+  .hidden {
+    display: none; }
+  aside {
+    margin-top: 0; } }
+
+@media (min-width: 49em) {
+  .btn-comment-log {
+    margin-left: 8em; } }
+
 .btn-primary {
   border: 0; }
+
+.tags-header {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  padding: 10px 0px 0px 0px;
+  margin: 0px 0px 10px 0px; }
+  .tags-header .label-tag {
+    position: absolute;
+    top: 19px;
+    left: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #485459;
+    pointer-events: none; }
+  .tags-header p {
+    display: inline-block; }
+  .tags-header #btn-text {
+    width: 10em;
+    border: none;
+    border-bottom: 1px solid #9E9E9E; }
+    .tags-header #btn-text:focus + .label-tag {
+      transition: 0.3s;
+      color: red;
+      top: -6px;
+      left: 2px;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #7C8589; }
+    .tags-header #btn-text:valid + .label-tag {
+      color: red;
+      top: -6px;
+      left: 2px;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #7C8589; }
+
+.tagmake-group {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 70px;
+  padding: 10px 0px 0px 0px;
+  margin: 0px 0px 10px 0px; }
+  .tagmake-group .label-tag {
+    position: absolute;
+    top: 19px;
+    left: 4px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #485459;
+    pointer-events: none; }
+  .tagmake-group .input-text {
+    border: none;
+    border-bottom: 1px solid #9E9E9E; }
+    .tagmake-group .input-text:focus + .label-tag {
+      transition: 0.3s;
+      color: red;
+      top: -6px;
+      left: 2px;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #7C8589; }
+    .tagmake-group .input-text:valid + .label-tag {
+      color: red;
+      top: -6px;
+      left: 2px;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #7C8589; }
+
+.tag-btn:hover {
+  opacity: 0.75; }

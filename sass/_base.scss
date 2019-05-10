@@ -1,1 +1,128 @@
-$red: red;
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    nav {
+        background-color: $gray;
+
+        .nav-link {
+            &:hover {
+                color: $blue !important;
+            }
+        }
+
+        .notification {
+            img {
+                width: 1.5em;
+
+                &:hover {
+                    animation-name: rotate;
+                    animation-duration: 0.5s;
+                }
+            }
+        }
+
+        .my-profile {
+            color: $white;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+    }
+}
+
+a{
+    color: $blue;
+}
+
+.jf-sidebar {
+    width: 200px;
+    position: fixed;
+    top: 3.5rem;
+    left: 0;
+    height: 100vh;
+    z-index: 99;
+    transition: all .3s;
+    background-color: $gray;
+    color: $lightgray;
+
+    .nav-item {
+        color: $gray;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        .nav-link {
+            color: $lightgray;
+
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+
+    .jf-footer {
+        position: absolute;
+        bottom: 0;
+        height: 6rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.btn-outline-cern {
+    color: $blue;
+    background-color: transparent;
+    background-image: none;
+    border-color: $blue;
+
+    &:hover {
+        color: $white;
+        background-color: $blue;
+        border-color: $blue;
+    }
+}
+
+.btn-cern{
+        color: $white;
+    background-color: $blue;
+    border-color: $blue;
+
+    &:hover{
+            color: $white;
+            background-color: $darkblue;
+            border-color: $darkblue;
+    }
+}
+
+aside {
+    margin-top: 10em;
+}
+
+.card {
+    box-shadow: 6px 5px 16px -2px rgba(0, 0, 0, 0.5);
+}
+
+.no-shadow {
+    box-shadow: none;
+}
+
+@media (max-width: 49em) {
+    .hidden {
+        display: none;
+    }
+
+    aside {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 49em) {
+    .btn-comment-log {
+        margin-left: 8em;
+    }
+}
