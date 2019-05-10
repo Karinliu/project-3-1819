@@ -71,3 +71,27 @@ Ook is er een zoekbalk toegevoegd. Helaas werkt dit nog niet. Het idee hierachte
 Zie hieronder de uitgewerkte prototype
 <img width="1280" alt="Screenshot 2019-05-10 01 41 48" src="https://user-images.githubusercontent.com/32538678/57494113-3897aa00-72c8-11e9-96ce-2f887c3257af.png">
 
+
+### Ontwerpkeuzes
+
+##### Admin tags toevoegen
+Voor mijn ontwerp heb ik er voor gekozen dat alleen de admin tags kan toevoegen en aanpassen. De reden hiervoor is omdat de functionaliteiten die nu worden geschreven over 10 jaar nog steeds toepasbaar moet zijn. 
+
+Aangezien er in 10 jaar veel veranderingen kan plaats vinden, is het voor zowel de gebruiker als de admins het meest overzichtelijk om deze mogelijkheid door een aantal mensen beschikbaar te maken. Ook voorkom je als gebruiker dubbele betekenissen voor bepaalde tags. 
+
+##### Tags toevoegen aan logs/runs
+Om er voor te zorgen dat tags toch nog eenvoudig gevonden kan worden leek het mij een goed idee dat gebruikers kan zoeken op tags maar dat zij niet specifiek het bepaalde woord moet intypen. Hierdoor kunnen zij een suggestie krijgen van bepaalde tags die horen bij het zoeken.
+
+### Gebruikte technieken
+De technieken die zijn gebruikt:
+
+##### Websockets
+Voor het renderen van real time data voor zowel de gebruiker, is er gebruik gemaakt van de package sockets.io. Hierdoor kan de admin tags toevoegen en wordt deze automatisch weergegeven aan de werknemers van CERN. 
+
+
+##### SASS
+Voor het stijlen is er gebruik gemaakt van SASS. Aangezien SASS niet ingeladen kan worden in de normale webbrowser, is er gebruik gemaakt van een CSS compiler. De styling is aan de hand van de eerder geschreven code die te vinden is op: http://cmd.jiskefet.io
+
+
+##### Bootstrap
+Voor het gebruik van grid en styling elementen, is er gebruik gemaakt van Bootstrap. 
