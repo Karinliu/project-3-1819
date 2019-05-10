@@ -1,5 +1,13 @@
 # Project 3 @cmda-minor-web · 2018-2019
 
+### Live versie
+Voor de live versie van de admin, kan de volgende link bekeken worden:
+https://karin-cern.herokuapp.com/admin
+
+Om de versie te bekijken als gewone gebruiker om tags toe te voegen, kan de volgende link bekeken worden:
+https://karin-cern.herokuapp.com/
+
+
 ### Case
 De case die is gekozen is als volgt: <br>
 
